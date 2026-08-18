@@ -19,8 +19,6 @@ int main(int argc, char **argv)
         int j = 0;
         while (argv[i][j])
         {
-            
-            
             char upper_c = static_cast<char>(std::toupper(static_cast<unsigned char>(argv[i][j])));
             result += upper_c;
             j++;
