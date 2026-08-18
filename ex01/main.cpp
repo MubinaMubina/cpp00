@@ -15,11 +15,11 @@ int main(void)
 
         if (command == "ADD")
         {
-            // call the PhoneBook method that handles this
+            phoneBook.addContact();
         }
         else if (command == "SEARCH")
         {
-            // call the PhoneBook method that handles this
+            phoneBook.searchContact();
         }
         else if (command == "EXIT")
         {
