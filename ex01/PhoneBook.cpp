@@ -11,7 +11,7 @@ PhoneBook::~PhoneBook(void)
 {
 }
 
-// Truncates strings longer than 10 chars to 9 chars + '.'
+
 static std::string truncateString(const std::string &str)
 {
     if (str.length() > 10)
@@ -19,7 +19,7 @@ static std::string truncateString(const std::string &str)
     return str;
 }
 
-// Helper to prompt for non-empty input
+
 static std::string getInput(const std::string &prompt)
 {
     std::string input;
@@ -61,13 +61,12 @@ void PhoneBook::addContact(void)
     if (input.empty()) return;
     newContact.setDarkestSecret(input);
 
-    // If phonebook has fewer than 8 contacts, fill next available slot
     if (_totalCount < 8)
     {
         _contacts[_totalCount] = newContact;
         _totalCount++;
     }
-    // If full (8 contacts), overwrite the oldest contact and increment oldest index
+
     else
     {
         _contacts[_oldestIndex] = newContact;
