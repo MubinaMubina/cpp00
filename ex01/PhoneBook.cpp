@@ -121,7 +121,6 @@ void PhoneBook::searchContact(void) const
     if (!std::getline(std::cin, input))
         return;
 
-    // Validate if single digit and within range
     if (input.length() == 1 && input[0] >= '0' && input[0] < '0' + _totalCount)
     {
         int index = input[0] - '0';

@@ -58,7 +58,6 @@ std::string	Contact::getDarkestSecret(void) const
 	return _darkest_secret;
 }
 
-// True only if every field is still empty, i.e. the contact was never filled in.
 bool	Contact::isEmpty(void) const
 {
 	return (_firstname.empty() && _lastname.empty() && _nickname.empty()
