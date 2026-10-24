@@ -11,7 +11,7 @@ int main(void)
     {
         std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
         if (!std::getline(std::cin, command))
-            break; // stream failed / EOF — decide if this should just stop the loop
+            break; 
 
         if (command == "ADD")
         {
@@ -25,7 +25,6 @@ int main(void)
         {
             break;
         }
-        // else: silently ignore, per spec ("Any other input is ignored.")
     }
     return 0;
 }
