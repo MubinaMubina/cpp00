@@ -22,4 +22,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+valgrind: $(NAME)
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(NAME) $(ARGS)
+
+.PHONY: all clean fclean re valgrind
