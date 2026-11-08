@@ -5,7 +5,7 @@
 #include <cctype>
 #include <string>
 
-struct Contact
+class Contact
 {
 private:
     std::string _firstname;
@@ -24,7 +24,6 @@ public:
 	void		setPhoneNumber(const std::string &str);
 	void		setDarkestSecret(const std::string &str);
 
-	// Getters
 	std::string	getFirstName(void) const;
 	std::string	getLastName(void) const;
 	std::string	getNickname(void) const;

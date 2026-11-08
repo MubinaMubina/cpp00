@@ -28,7 +28,7 @@ static std::string getInput(const std::string &prompt)
         std::cout << prompt;
         if (!std::getline(std::cin, input))
             return "";
-        if (!input.empty())
+        if (input.find_first_not_of(" \t") != std::string::npos)
             return input;
         std::cout << "Field cannot be empty. Please try again.\n";
     }
